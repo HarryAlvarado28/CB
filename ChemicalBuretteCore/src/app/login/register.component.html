@@ -1,0 +1,45 @@
+<div class="container reg">
+  <!-- Default form register -->
+  <form ngNativeValidate #f="ngForm" (ngSubmit)="registrarUsuario(f)" class="text-center border border-light p-5">
+
+    <p class="h4 mb-4">¡Registrarme!</p>
+
+    <div class="form-row mb-4">
+      <div class="col form-group">
+        <!-- First name -->
+        <input [ngModel]="name" name="nombre" class="form-control" type="text" placeholder="Nombre">
+      </div>
+      <div class="col form-group">
+        <!-- Last name -->
+        <input ngModel name="lastname" class="form-control" type="text" placeholder="Apellido">
+      </div>
+    </div>
+
+    <!-- Code number -->
+    <input ngModel name="codepc" type="text" class="form-control mb-4" placeholder="Código de Profesor/Clase" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+
+    <!-- E-mail -->
+    <input ngModel name="email" type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="Correo Electrónico">
+
+    <!-- Password -->
+    <input ngModel name="password" type="password" class="form-control" placeholder="Contraseña" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+    <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+        Al menos 8 caracteres y 1 dígito
+    </small>
+
+    <!-- Sign up button -->
+    <button mdbBtn color="info" block="true" class="my-4" type="submit">Registrarse</button>
+
+    <p>Ya tengo una cuenta <a [routerLink]="['/login']" routerLinkActive="router-link-active">Iniciar sesión</a></p>
+
+    <hr>
+
+    <!-- Terms of service -->
+    <p>Al hacer clic en
+      <em>Registrarse</em>, usted acepta nuestros 
+      <a href="" target="_blank">términos de servicio</a> y
+      <a href="" target="_blank">condiciones de servicio</a>. </p>
+
+  </form>
+  <!-- Default form register -->
+</div>

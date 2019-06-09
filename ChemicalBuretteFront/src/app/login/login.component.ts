@@ -60,18 +60,18 @@ export class LoginComponent implements OnInit {
 
     let usuario = new Usuario(null, forma.value.email, forma.value.password);
 
-    // this._usuarioService.login(usuario, forma.value.recuerdame)
-    //   .subscribe(resp => {
-    //     console.log('resp:login:: ', resp);
-    //     this.router.navigate(['/dashboard']);
-    //   });
+    this._usuarioService.login(usuario, forma.value.recuerdame)
+      .subscribe(resp => {
+        console.log('resp:login:: ', resp);
+        // this.router.navigate(['/dashboard']);
+      });
 
-    let temp = this._usuarioService.login(usuario, forma.value.recuerdame);
+    // // let temp = this._usuarioService.login(usuario, forma.value.recuerdame);
     
-    if (temp.email == 'test1@gmail.com' && temp.password == '123456') {
-      console.log('Starting:login:: ');
-      this.router.navigate(['/dashboard']);
-    }
+    // if (temp.email == 'test1@gmail.com' && temp.password == '123456') {
+    //   console.log('Starting:login:: ');
+    //   this.router.navigate(['/dashboard']);
+    // }
     console.log('forma.valid::', forma.valid);
     console.log(forma.value);
   }

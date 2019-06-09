@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { ContentComponent } from './content/content.component';
 import { RefsComponent } from './refs/refs.component';
 import { SabiasqueComponent } from './sabiasque/sabiasque.component';
+import { ExamComponent } from './exam/exam.component';
 
 
 @NgModule({
@@ -14,13 +15,15 @@ import { SabiasqueComponent } from './sabiasque/sabiasque.component';
   declarations: [
       ContentComponent,
       RefsComponent,
-      SabiasqueComponent
+      SabiasqueComponent,
+      ExamComponent
   ],
   providers: [],
   exports: [
     ContentComponent,
     RefsComponent,
-    SabiasqueComponent
+    SabiasqueComponent,
+    ExamComponent
   ]
 })
 export class ComponentsModule { }

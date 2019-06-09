@@ -1,0 +1,35 @@
+<div class="container log">
+
+  <!-- Default form login -->
+  <form ngNativeValidate #f="ngForm" (ngSubmit)="ingresar(f)" class="text-center border border-light p-5">
+
+    <p class="h4 mb-4">¿Listo para Empezar?</p>
+
+    <!-- Email -->
+    <input ngModel name="name" type="email" class="form-control mb-4" placeholder="Correo">
+
+    <!-- Password -->
+    <input ngModel name="password" type="password" class="form-control mb-4" placeholder="Contraseña">
+
+    <div class="d-flex justify-content-around">
+      <div>
+        <!-- Remember me -->
+        <mdb-checkbox [default]="true">Recuérdame</mdb-checkbox>
+      </div>
+      <div>
+        <!-- Forgot password -->
+        <a href="">¿Olvidó su contraseña?</a>
+      </div>
+    </div>
+
+    <!-- Sign in button -->
+    <button mdbBtn color="info" block="true" class="my-4" type="submit">Iniciar sesión</button>
+
+    <!-- Register -->
+    <p>¿No es miembro?
+      <a [routerLink]="['/register']" routerLinkActive="router-link-active">Registerme</a>
+    </p>
+
+  </form>
+  <!-- Default form login -->
+</div>

@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Observable, Subscriber, Subscription } from 'rxjs';
 import { map, filter } from 'rxjs/operators';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -11,8 +12,12 @@ import { map, filter } from 'rxjs/operators';
 export class RxjsComponent implements OnInit, OnDestroy {
 
   subscription: Subscription;
-
-  constructor() {
+  id = 0;
+  constructor(public activatedRoute: ActivatedRoute, public router: Router) {
+    activatedRoute.params.subscribe(params => {
+      this.id = params['id'];
+      console.log('el id:: ', this.id);
+    });
     /** Callback de un observable */
     this.subscription = this.regresaObservable().subscribe(
       numero => console.log('Subs: ', numero),        /** Next() */
@@ -70,6 +75,12 @@ export class RxjsComponent implements OnInit, OnDestroy {
       })
     );
 
+  }
+
+  continuar(){
+    
+    console.log("Calificar y seguir! ", this.id);
+    this.router.navigate([`/rxjs/${this.id++}`]);
   }
 
 }

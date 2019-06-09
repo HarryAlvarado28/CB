@@ -94,6 +94,18 @@ export class UsuarioService {
     } else {
       localStorage.removeItem('email');
     }
+    let url = 'http://192.168.43.34:9000/api/login';
+
+    return this.http.post(url, {
+      Usuario : 'Harry',
+      Pass: 'ANGULARXopa',
+      code_a: '1234'
+    }).pipe(
+      map((resp:any) => {
+        console.log('Respuesta Server: ',resp);
+        return true;
+      })
+    );
     // let url = URL_SERVICIOS + '/login';
     // return this.http.post(url, usuario).pipe(
     //   map((resp: any) => {
@@ -102,7 +114,7 @@ export class UsuarioService {
     //   })
     // );
     
-    return usuario;
+    // return usuario;
   }
 
   crearUsuario(usuario: Usuario) {
