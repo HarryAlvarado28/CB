@@ -13,8 +13,6 @@ export class RegisterComponent implements OnInit {
   ngOnInit() { }
 
   registrarUsuario(forma: NgForm){
-
-    // this.forma.get('nombre')
     console.log("Te esta registrando!!! valor de la formareg: ", forma.value)
   }
 
