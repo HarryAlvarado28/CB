@@ -8,11 +8,14 @@ import { ComponentsModule } from '../components/components.module';
 import { ProgresoComponent } from './progreso/progreso.component';
 
 // MDB Angular Pro
-import { ButtonsModule, WavesModule, CardsFreeModule } from 'angular-bootstrap-md'
+import { ButtonsModule, WavesModule, CardsFreeModule } from 'angular-bootstrap-md';
+import { ExamComponent } from './exam/exam.component'
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
       DashboardComponent,
-      ProgresoComponent
+      ProgresoComponent,
+      ExamComponent
   ],
   imports: [
     CommonModule,
@@ -21,11 +24,13 @@ import { ButtonsModule, WavesModule, CardsFreeModule } from 'angular-bootstrap-m
     ComponentsModule,
     ButtonsModule,
     WavesModule,
-    CardsFreeModule
+    CardsFreeModule,
+    FormsModule
   ],
   exports: [
     DashboardComponent,
-    ProgresoComponent
+    ProgresoComponent,
+    ExamComponent
   ]
 })
 export class PagesModule { }

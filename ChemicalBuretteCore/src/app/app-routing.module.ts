@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register.component';
 import { PagesComponent } from './pages/pages.component';
+import { NopagefoundComponent } from './shared/nopagefound/nopagefound.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -11,7 +12,8 @@ const routes: Routes = [
     path: '',
     component: PagesComponent,
     loadChildren: './pages/pages.module#PagesModule'
-  }
+  },
+  { path: '**', component: NopagefoundComponent },
 ];
 
 @NgModule({
