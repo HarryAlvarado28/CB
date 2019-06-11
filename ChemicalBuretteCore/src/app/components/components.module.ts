@@ -8,7 +8,6 @@ import { ButtonsModule, WavesModule, CardsFreeModule } from 'angular-bootstrap-m
 import { ButtonlevelComponent } from './buttonlevel/buttonlevel.component'
 import { FormsModule } from '@angular/forms';
 
-
 @NgModule({
   declarations: [
     ContentComponent,
@@ -21,7 +20,7 @@ import { FormsModule } from '@angular/forms';
     ButtonsModule,
     WavesModule,
     CardsFreeModule,
-    FormsModule
+    FormsModule    
   ],
   exports: [
     ContentComponent,

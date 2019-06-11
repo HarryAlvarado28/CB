@@ -12,6 +12,7 @@ import { PagesComponent } from './pages/pages.component';
 import { PagesModule } from './pages/pages.module';
 import { SharedModule } from './shared/shared.module';
 import { ComponentsModule } from './components/components.module';
+import { ServiceModule } from './services/service.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ComponentsModule } from './components/components.module';
     FormsModule,
     PagesModule,
     SharedModule,
-    ComponentsModule
+    ComponentsModule,
+    ServiceModule
   ],
   providers: [],
   bootstrap: [AppComponent],
