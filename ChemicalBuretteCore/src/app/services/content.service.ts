@@ -9,10 +9,12 @@ export class ContentService {
 
   URL_BASE = 'http://localhost:4000'
 
-  constructor(public http: HttpClient) { }
+  constructor(public _http: HttpClient) {
+    console.log("El Servicio ContentService esta listo!")
+  }
 
   getTest(){
-    return this.http.get('http://localhost:4000/').pipe(
+    return this._http.get('http://localhost:4000/').pipe(
       map((resp:any) => {
         console.log("Test-Resp:: ",resp)
         return resp
@@ -23,7 +25,7 @@ export class ContentService {
   getAllResource() {
     let url = this.URL_BASE + '/fase1/data'
 
-    return this.http.get(url).pipe(
+    return this._http.get(url).pipe(
       map( (resp: any) => {
         console.log('service-resp: ', resp)
         return resp;

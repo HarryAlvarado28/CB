@@ -3,8 +3,8 @@
 
     <div class="col-9">
       
-      <app-content></app-content>
-      <app-buttonlevel></app-buttonlevel>
+      <app-content [cont]=contenidoBase></app-content>
+      <app-buttonlevel (change)="lol($event)"></app-buttonlevel>
 
     </div>
     <div class="col-3">

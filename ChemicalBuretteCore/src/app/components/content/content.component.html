@@ -1,15 +1,24 @@
 <div class="jumbotron">
-  <h1 class="display-4">Aspectos Generales de la Química</h1>
+  <!-- <h1 class="display-4">Aspectos Generales de la Química</h1> -->
+  <h1 class="display-4">{{contIn.area[cont[0]].titulo[cont[1]].nombre}}</h1>
   <hr>
-  <h3>Definición</h3>
-  <p class="lead">La química es la rama de la ciencia que estudia las características y composición de todos los materiales, as! como los cambios que éstos sufren. (cada sustancia química tiene características específicas. (cuando ocurre un cambio químico, las sustancias que se producen son muy diferentes de los materiales iniciales.</p>
+  <!-- <h3>Definición</h3> -->
+  <h3>{{contIn.area[cont[0]].titulo[cont[1]].subtitulo[cont[2]].nombre}}</h3>
+  <!-- <p class="lead">La química es la rama de la ciencia que estudia las características y composición de todos los materiales, as! como los cambios que éstos sufren. (cada sustancia química tiene características específicas. (cuando ocurre un cambio químico, las sustancias que se producen son muy diferentes de los materiales iniciales.</p> -->
+  <p class="lead">{{contIn.area[0].titulo[0].subtitulo[0].contenido}}</p>
   <hr class="my-4">
   <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
   <!-- <a mdbBtn color="primary" size="lg" href="#" role="button" mdbWavesEffect>Learn more</a> -->
   <hr>
 
-  <h3>Áreas de la Química</h3>
+  <!-- <h3>Áreas de la Química</h3> -->
+  <h3>{{contIn.area[0].titulo[0].subtitulo[1].nombre}}</h3>
   <ul>
+    <li *ngFor="let item of list">
+      <strong>{{item.nombre}}</strong>, {{item.contenido}}
+    </li>
+  </ul>
+  <!-- <ul>
     <li>
       <strong>Química General</strong> Estudia las propiedades comunes de todos los cuerpos y las leyes alas que están sometidos los cambios que en ella se efectúan.
     </li>
@@ -36,5 +45,5 @@
       <strong>Química analítica</strong> estudia los métodos de detección identificación y
       cuantificación determinación0 de una sustancia en una muestra.
     </li>
-  </ul>
+  </ul> -->
 </div>

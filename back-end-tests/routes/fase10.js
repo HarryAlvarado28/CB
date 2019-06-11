@@ -11,56 +11,92 @@ app.get('/', (req, res, next) => {
 });
 
 app.get('/data', (req, res, next) => {
-    console.log('Successful request!');
+    console.log('Successful request! ', new Date());
     res.status(200).json({
         ok: true,
         mensaje: 'Estas en la FASE #1º - Petición realizada correctamente',
         area: [
             { 
+                serie: 100,
                 nombre: 'MATERIA ENERGÍA Y SUS CAMBIOS',
-                concepto: [
+                titulo: [
                    {
+                       serie: 110,
                        nombre: 'Aspectos Generales de la Química',
-                       titulo: [
+                       subtitulo: [
                            { 
+                               serie: 111,
                                nombre: 'Definición',
-                               contenido: 'La química es la rama de la ciencia que estudia las características y composición de todos los materiales, as! como los cambios que éstos sufren.'
+                               contenido: 'La química es la rama de la ciencia que estudia las características y composición de todos los materiales, as! como los cambios que éstos sufren.',
+                               listado: [
+                                   {
+                                       nombre: '',
+                                       contenido: ''
+                                   }
+                               ]
                             },
                             {
+                                serie: 112,
                                 nombre: 'Áreas de la Química',
-                                contenido: ''
+                                contenido: '',
+                                listado: [
+                                    {
+                                        nombre: 'Química General',
+                                        contenido: 'Estudia las propiedades comunes de todos los cuerpos y las leyes alas que están sometidos los cambios que en ella se efectúan.'
+                                    },
+                                    {
+                                        nombre: 'Química Aplicada',
+                                        contenido: 'Estudia las propiedades de cada una de las sustancias en particular, desde el punto de vista útil medicinal, agrícola, industrial, etc.'
+                                    },
+                                    {
+                                        nombre: 'Química Inorgánica',
+                                        contenido: 'Estudia las sustancias que provienen el reino mineral.'
+                                    },
+                                    {
+                                        nombre: 'Química Orgánica',
+                                        contenido: 'Estudia principalmente los compuestos que provienen seres vivos, animales y vegetales.'
+                                    }
+                                ]
                             },
                             {
+                                serie: 113,
                                 nombre: 'Reseña de su Evolución Histórica',
                                 contenido: ''
                             },
                             {
+                                serie: 113,
                                 nombre: 'Relación Interdisciplinaria con otras Ciencias',
                                 contenido: ''
                             }
                        ]
                    },
                    {
+                       serie: 120,
                        nombre: 'Aspectos generales de la metodología científica',
-                       titulo: [
+                       subtitulo: [
                             { 
+                                serie: 121,
                                 nombre: 'Método científico y sus aplicaciones en la investigación',
                                 contenido: '.'
                             },
                             {
+                                serie: 122,
                                 nombre: 'El Informe o Reporte Científico',
                                 contenido: ''
                             },
                             {
+                                serie: 123,
                                 nombre: 'Magnitudes y Unidades de Medidas utilizadas en Química',
                                 contenido: ''
                             }
                         ]
                    },
                    {
+                       serie: 130,
                        nombre: 'Aspectos generales de la Materia',
-                       titulo: [
+                       subtitulo: [
                            {
+                               serie: 131,
                                nombre: 'Definición',
                                contenido: ''
                            }
@@ -70,10 +106,10 @@ app.get('/data', (req, res, next) => {
             },
             {
                 nombre: 'EL ÁTOMO CONSTITUYENTE FUNDAMENTAL DE LA MATERIA',
-                concepto: [
+                titulo: [
                     {
                         nombre: 'Estructura Atómica y Distribución Electrónica',
-                        titulo: [
+                        subtitulo: [
                             { 
                                 nombre: 'Reseña Histórica de los Modelos Atómicos',
                                 contenido: ''
@@ -83,7 +119,7 @@ app.get('/data', (req, res, next) => {
                                 contenido: ''
                             },
                             {
-                                nombre: 'Conceptos de número atómico, número de masa, isotopos y símbolos atómicos',
+                                nombre: 'titulotts de número atómico, número de masa, isotopos y símbolos atómicos',
                                 contenido: ''
                             },
                             {
@@ -100,10 +136,10 @@ app.get('/data', (req, res, next) => {
             },
             {
                 nombre: 'ENLACE QUÍMICO Y ESTADOS DE AGREGACIÓN DE LA MATERIA',
-                concepto: [
+                titulo: [
                     {
                         nombre: 'Enlace Químico',
-                        titulo: [
+                        subtitulo: [
                             {
                                 nombre: 'Definición',
                                 contenido: ''
