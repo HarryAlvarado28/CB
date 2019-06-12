@@ -7,7 +7,7 @@ import { ContentService } from 'src/app/services/content.service';
   styles: []
 })
 export class ContentComponent implements OnInit {
-  @Input() cont : []
+  @Input() cont : any[]
   contIn: any
   list: any
   // objeto: any;
