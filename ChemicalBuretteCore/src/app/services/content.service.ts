@@ -23,9 +23,9 @@ export class ContentService {
   }
 
   getAllResource() {
-    let url = this.URL_BASE + '/fase1/data'
-
-    return this._http.get(url).pipe(
+    // let url = this.URL_BASE + '/fase1/data'
+    let url_Firebase = 'https://chemical-burette.firebaseio.com/fase/0.json'
+    return this._http.get(url_Firebase).pipe(
       map( (resp: any) => {
         console.log('service-resp: ', resp)
         return resp;
